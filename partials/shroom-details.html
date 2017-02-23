@@ -1,5 +1,5 @@
-<ul class="list-group" ng-repeat="mushroom in mushrooms | filter: searchText">
-   <li ng-repeat="(key, val) in mushroom" class="list-group-item">
-      <strong>{{key}}:</strong> {{val.description}} {{key.edible}}
-   </li>
+<ul class="list-group" ng-repeat="mushroom in mushrooms | filter: {description: searchText, edible: eatit}">
+  <li class="list-group-item">
+    <strong>{{mushroom.name}}:</strong> {{mushroom.description}} <hr> Is edible: {{mushroom.edible}}
+  </li>
 </ul>
